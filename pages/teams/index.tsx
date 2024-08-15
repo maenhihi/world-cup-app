@@ -1,7 +1,7 @@
 import React from "react";
 import path from 'path';
 import fs from 'fs/promises';
-import Teamcard from '@/pages/components/teamcard'
+import Teamcard from "@/pages/components/teamcard"
 
 export async function getStaticProps() {
     const filePath = path.join(process.cwd(), 'public', 'data', 'data.json');
@@ -26,7 +26,7 @@ export default function Teams(teams: any) {
         <section id="teams">
             <div className="container">
                 <div className="row teams--row">
-                    {arr1.map((array: { id: React.Key | null | undefined; country: any; coach: any; history: any; flag:any; }) => (
+                    {arr1.map((array: { id: React.Key | null | undefined; country: string; coach: string; history: string; flag:string; }) => (
                         <Teamcard
                             key={array.id}
                             country={array.country}

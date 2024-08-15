@@ -1,6 +1,13 @@
 import Image from "next/image";
 
-export default function teamcard({ country, history, coach, flag }) {
+interface MatchProps {
+  country: string;
+  history: string;
+ coach: string;
+  flag: string;
+}
+
+export default function teamcard({ country, history, coach, flag }: MatchProps) {
   return (
     <div className="team__card--wrapper">
       <div className="singleTeam">

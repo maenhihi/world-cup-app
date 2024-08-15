@@ -1,6 +1,14 @@
 import Image from "next/image"
 
-export default function matches({ date, home_team, away_team, result }) {
+interface MatchProps {
+    date: string;
+    home_team: string;
+    away_team: string;
+    result: string;
+}
+
+export default function Matches({ date, home_team, away_team, result }: MatchProps) {
+ 
     return (
         <div className="matches__wrapper">
             <h1 className="black">
