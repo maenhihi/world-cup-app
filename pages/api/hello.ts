@@ -11,3 +11,11 @@ export default function handler(
 ) {
   res.status(200).json({ name: "John Doe" });
 }
+
+type Repo = {
+  name: string
+  stargazers_count: number
+}
+
+
+
