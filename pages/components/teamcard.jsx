@@ -10,7 +10,7 @@ export default function teamcard({ country, history, coach, flag }) {
             <h2>Coach: {coach}</h2>
           </div>
           <div className="image--wrapper">
-            <Image src={flag} alt={`${country} flag`} width={100} height={60} />
+            <Image className="flag__image" src={flag} alt={`${country} flag`} width={100} height={60} />
           </div>
         </div>
         <p>History: {history}</p>

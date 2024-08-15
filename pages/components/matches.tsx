@@ -2,8 +2,6 @@ import Image from "next/image"
 
 export default function matches({ date, home_team, away_team, result }) {
     return (
-
-        <>
         <div className="matches__wrapper">
             <h1 className="black">
                 {date}
@@ -21,6 +19,5 @@ export default function matches({ date, home_team, away_team, result }) {
             </div>
             <br />
             </div>
-        </>
     )
 }
