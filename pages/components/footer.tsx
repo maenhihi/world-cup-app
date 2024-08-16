@@ -1,10 +1,9 @@
 export default function footer(){
     return(
 <section id="footer">
-    <div className="container__footer">
-        <div className="row__footer">
-            <div className="footer__wrapper">
-            <div>
+    
+            {/* <div className="footer__wrapper"> */}
+            
                <ul className="footer__list">
                 <li className="footer__list-item">
                     PRIVACY POLICY
@@ -16,13 +15,12 @@ export default function footer(){
                     MANAGE COOKIE PREFRENCES
                 </li>
                 </ul>
-            </div>
+            
             <div>
                 Copyright © 1994 - 2024 FIFA. All rights reserved.
             </div>
-        </div>
-        </div>
-    </div>
+        {/* </div> */}
+        
 </section>
 
     )

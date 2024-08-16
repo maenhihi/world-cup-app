@@ -11,9 +11,9 @@ export default function Matches({ date, home_team, away_team, result }: MatchPro
  
     return (
         <div className="matches__wrapper">
-            <h1 className="black">
+            <h5 className="black">
                 {date}
-            </h1>
+            </h5>
             <div className="matches__image--wrapper">
             <Image src={'/flags/fifa-logo.svg'} alt="world cup logo"
             width={1000}

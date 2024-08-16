@@ -1,15 +1,24 @@
 import Image from "next/image";
-
+import Link from "next/link";
 interface MatchProps {
+  id:number;
   country: string;
   history: string;
  coach: string;
   flag: string;
 }
 
-export default function teamcard({ country, history, coach, flag }: MatchProps) {
+
+
+export default function teamcard({ id, country, history, coach, flag }: MatchProps) {
+   
   return (
     <div className="team__card--wrapper">
+      <Link
+      href={`/teams/${id}`}
+      >
+      
+      
       <div className="singleTeam">
         <div className="singleTeam--top">
           <div>
@@ -22,6 +31,7 @@ export default function teamcard({ country, history, coach, flag }: MatchProps) 
         </div>
         <p>History: {history}</p>
       </div>
+      </Link>
     </div>
   );
 }

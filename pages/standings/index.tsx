@@ -28,8 +28,7 @@ type Standing = {
 
 
 export default function standings({ standings }: { standings: Standing[] }) {
-    // let arr = Object.values(standings);
-    // console.log(arr)
+ 
     const [arr, setArr] = useState(standings);
     const [filter, setFilter] = useState<string | undefined>();
 

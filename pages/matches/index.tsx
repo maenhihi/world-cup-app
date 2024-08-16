@@ -18,23 +18,28 @@ export async function getStaticProps() {
 }
 
 
-export default function Home(matches: any){
+export default function Home(matches: any) {
     let arr = Object.values(matches);
     let arr1: any = arr[0]
     console.log(arr1)
-    //         date, home_team, away_team, result 
 
-    return(
+    return (
         <>
-         {arr1.map((array: { id: React.Key | null | undefined; date: string; home_team: string; away_team: string; result:string; }) => (
-                        <Matches
-                            key={array.id}
-                            date={array.date}
-                            home_team={array.home_team}
-                            away_team={array.away_team}
-                            result={array.result}
-                        />
-                    ))}
+            <section id="matches">
+                <div className="container">
+                    <div className="row teams--row">
+                        {arr1.map((array: { id: React.Key | null | undefined; date: string; home_team: string; away_team: string; result: string; }) => (
+                            <Matches
+                                key={array.id}
+                                date={array.date}
+                                home_team={array.home_team}
+                                away_team={array.away_team}
+                                result={array.result}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
