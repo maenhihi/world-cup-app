@@ -221,3 +221,77 @@ h1, h2, p{
 .matches__image--wrapper{
   display: flex;
 }
+
+/*Table/Standings*/
+
+.table-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+tr{
+  margin-top: 12px;
+}
+
+table.sortable td,
+table.sortable th {
+  padding: 0.125em 0.25em;
+  width: 10em;
+  height: 2em;
+  font-size: 20px;
+}
+
+table.sortable th {
+  font-weight: bold;
+  border-bottom: thin solid #888;
+  position: relative;
+}
+
+
+table.sortable th:nth-child(5) {
+  width: 10em;
+}
+
+
+table.sortable td.num {
+  text-align: right;
+} 
+
+table.sortable tbody tr:nth-child(odd) {
+  background-color: #ddd;
+  
+}
+
+tr{
+  width: 85%;
+}
+
+#filter{
+  padding: 8px;
+  font-size: 16px;
+  margin-left: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #888888;
+  color: #FFF;
+  box-shadow:  2px 2px 8px black;
+  outline: none;
+  transition: ease-in-out 200ms ;
+}
+
+#filter:hover{
+  background-color: #605e5e;
+
+}
+
+.filter--wrapper{
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 12px;
+}
+
+option{
+font-family: Verdana, Geneva, Tahoma, sans-serif
+}
