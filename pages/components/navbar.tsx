@@ -5,9 +5,11 @@ export default function Navbar() {
     return (
    
     <ul className="navbar__items">
-            <Image src={'/flags/fifa-logo.svg'} alt="world cup logo"
+         <Link href={'/'}>
+         <Image src={'/flags/fifa-logo.svg'} alt="world cup logo"
                 width={100}
                 height={50} />
+         </Link>
             <Link href={'/'}>
                 <li className="navbar__item">
                     Home
