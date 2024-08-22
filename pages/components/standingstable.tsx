@@ -13,7 +13,7 @@ export default function standingstable({ team, played, wins, draws, losses }: Ma
         <>
             <tbody>
                 <tr>
-                    <td>
+                    <td className="team__name--logo">
                         <Image
                             src={`/flags/${team}.png`}
                             width={20}

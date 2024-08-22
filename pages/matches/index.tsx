@@ -21,12 +21,17 @@ export async function getStaticProps() {
 export default function Home(matches: any) {
     let arr = Object.values(matches);
     let arr1: any = arr[0]
-    console.log(arr1)
 
     return (
         <>
             <section id="matches">
                 <div className="container">
+                    <div className="row individual__team--row">
+
+                <h1 className="teams__header">
+                Here are the latest results!!!  <div className="ball__emoji ">  ⚽️</div>
+            </h1>
+
                     <div className="row teams--row">
                         {arr1.map((array: { id: React.Key | null | undefined; date: string; home_team: string; away_team: string; result: string; }) => (
                             <Matches
@@ -38,6 +43,8 @@ export default function Home(matches: any) {
                             />
                         ))}
                     </div>
+                    </div>
+
                 </div>
             </section>
         </>

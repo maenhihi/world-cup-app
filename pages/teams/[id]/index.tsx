@@ -47,9 +47,9 @@ export default function teams({ team }: any) {
     const recentMatches = team.recent_matches
     console.log(teamPlayers)
     return (
-        <>
+        
             <section id="TeamDetails">
-                <div className="container">
+                {/* <div className="container"> */}
                     <div className="row individual__team--row">
                         <div className="return__arrow--wrapper">
                             <Link href="/teams">
@@ -71,7 +71,7 @@ export default function teams({ team }: any) {
                                     width={30}
                                     height={15} alt={''}
                                 />
-                                <h2><span>Here’s the lowdown on how Coach {team.coach}'s {team.name} has been go so far:</span></h2>
+                                <h2><span>Here’s the lowdown on how Coach {team.coach}'s {team.name} has been going so far:</span></h2>
 
                             </div>
 
@@ -86,8 +86,8 @@ export default function teams({ team }: any) {
                                 ))}
                             </div>
 
-
-                            <h2>    Here's a potlight on {team.name}'s brightest stars in this editions World Cup:     </h2>
+                            <h2>{team.history}</h2>
+                            <h3>    Here's a spotlight on {team.name}'s brightest stars in this editions World Cup:     </h3>
 
                             {teamPlayers.map((array: { id: React.Key | null | undefined; name: string; position: string; age: number; club: string; }) => (
                                 <Individualplayers
@@ -103,8 +103,7 @@ export default function teams({ team }: any) {
 
                         </div>
                     </div>
-                </div>
             </section>
-        </>
+        
     );
 }

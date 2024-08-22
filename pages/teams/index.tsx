@@ -22,20 +22,22 @@ export default function Teams(teams: any) {
 
     let arr = Object.values(teams);
     let arr1: any = arr[0]
-    console.log(arr1[0].id)
     return (
         <section id="teams">
             <div className="container">
+              
+             <h1 className="teams__header">
+                Select a team from below!!! <div className="emoji__wrapper">👇</div>
+            </h1>
                 <div className="row teams--row">
+               
                 
-                    {arr1.map((array: { id: number; country: string; coach: string; history: string; flag:string; }) => (
+                    {arr1.map((array: { id: number; country: string;  flag:string; }) => (
                         
                         <Teamcard
                             key={array.id}
                             id={array.id}
-                            country={array.country}
-                            coach={array.coach}
-                            history={array.history}
+                          country={array.country}
                             flag={array.flag}  
                                           
                         />

@@ -49,7 +49,16 @@ export default function standings({ standings }: { standings: Standing[] }) {
     };
 
     return (<>
+    <div className="standings__container">
+<div className="standings__row">
+
+
+   
         <h1>Current World Cup Standings</h1>    
+       
+       
+       
+        <div className="table-wrap">
         <div className="filter--wrapper">
         <select onChange={handleFilterChange} name="" id="filter" >
             <option disabled value="">Sort by...</option>
@@ -59,10 +68,6 @@ export default function standings({ standings }: { standings: Standing[] }) {
             <option value='MOST_LOSSES'>Most Losses</option>
         </select>
         </div>
-       
-       
-        <div className="table-wrap">
-       
             <table className="sortable">
                 <thead>
                     <tr>
@@ -99,6 +104,9 @@ export default function standings({ standings }: { standings: Standing[] }) {
             </table>
          
         </div>
+        </div>
+        </div>
+
     </>
     )
 }
